@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#04091d">
+  <meta name="description" content="GALAXY SHOOT — Processing 원작을 웹으로 옮긴 자동 연사 우주 슈팅 게임">
+  <title>GALAXY SHOOT — Final Galaxy</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./sketch.js" defer></script>
+</head>
+<body>
+  <main class="game" id="game" aria-label="Galaxy Shoot 게임">
+    <canvas id="gameCanvas" aria-label="게임 화면: 마우스 또는 손가락을 움직여 우주선을 조종합니다."></canvas>
+
+    <div class="hud" id="hud">
+      <div class="hud-top">
+        <div class="stat"><small>SCORE</small><strong id="score">0</strong></div>
+        <div class="stat center-stat"><small id="pattern">GRID</small><strong id="wave">WAVE 1</strong></div>
+        <div class="stat right-stat"><small>LIVES</small><strong id="lives">♥ ♥ ♥</strong></div>
+      </div>
+      <div class="fire-rate" id="fireRate">ENEMY FIRE ×1.0</div>
+      <div class="notice" id="notice" aria-live="polite"></div>
+      <div class="bottom-hud"><span id="parryState">PARRY READY</span><span class="controls-desktop">마우스 이동 · 자동 발사 · SHIFT 패링 · P 일시정지</span><span class="controls-touch">터치 드래그 · 자동 발사 · PARRY 패링</span></div>
+    </div>
+
+    <button type="button" class="ui-btn pause-btn" id="pauseBtn" aria-label="일시정지">Ⅱ 일시정지</button>
+    <button type="button" class="ui-btn parry-btn" id="parryBtn" aria-label="패링">PARRY</button>
+
+    <section class="overlay" id="overlay" aria-live="polite">
+      <div class="overlay-panel">
+        <p class="overline">3D SPACE SHOOTER</p>
+        <h1 id="overlayTitle">GALAXY<br>SHOOT</h1>
+        <p class="overlay-subtitle" id="overlayInfo">AUTO FIRE · PERFECT PARRY</p>
+        <button type="button" class="start-btn" id="startBtn">게임 시작</button>
+        <p class="overlay-help">PC: 마우스 이동 / Shift 패링<br>모바일: 터치 드래그 / PARRY 버튼<br>적의 탄환이 닿는 순간 패링하세요!</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
